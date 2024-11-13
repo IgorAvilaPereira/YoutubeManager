@@ -75,8 +75,8 @@ public class Youtube {
         RequestVideoFileDownload request = new RequestVideoFileDownload(format)
                 // optional params    
                 .saveTo(outputDir) // by default "videos" directory
-                        .renameTo(videoId); // by default file name will be same as video title on youtube
-        //                .overwriteIfExists(true); // if false and file with such name already exits sufix will be added video(1).mp4
+                        .renameTo(videoId) // by default file name will be same as video title on youtube
+                        .overwriteIfExists(true); // if false and file with such name already exits sufix will be added video(1).mp4
         System.out.println("Realizando o Download....(favor espere)");
         Response<File> response = downloader.downloadVideoFile(request);
         System.out.println("Terminando o Download");
